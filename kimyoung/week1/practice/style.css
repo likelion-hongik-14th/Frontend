@@ -1,0 +1,151 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+body {
+  background-color: #f4f4f4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+}
+
+nav {
+  width: 100%;
+  height: 60px;
+  background-color: #333;
+  color: white;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+}
+nav > ul {
+  display: flex;
+  list-style: none;
+  height: 100%;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0 20%;
+}
+nav li {
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+nav li:hover {
+  color: #ffb6c1;
+}
+
+#heading {
+  margin-top: 80px;
+  margin-bottom: 10px;
+  color: #333;
+  text-align: center;
+  font-size: 2.0rem;
+}
+
+
+main {
+  width: 80vw;
+  height: 100vh;
+  margin: 20px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content:end;
+  align-items: center;
+  background: white;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+section p {
+  font-size: 1.2em;
+  margin: 5px 0;
+}
+
+.picture-text {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    color:#2164d0;
+    font-size:150%;
+    font-weight: 500;
+}
+
+input[type="password"] {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  width: 250px;
+}
+
+input:focus {
+  outline: 2px solid #ff69b4;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #ff69b4;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition:
+    transform 0.2s,
+    background-color 0.2s;
+}
+
+button:hover {
+  background-color: #ff1493;
+  transform: scale(1.05);
+}
+button:active {
+  transform: scale(0.95);
+}
+
+footer {
+  margin-top: auto;
+  width: 100%;
+  height: 80px;
+  background-color: #eee;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer a {
+  text-decoration: none;
+  color: #777;
+  font-weight: bold;
+  font-size: 120%;
+}
+
+.introduction {
+  line-height: 1.8;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  width: fit-content;
+}
+
+.label {
+  font-weight: 800;
+  color: #2c3e50;
+  margin-right: 8px;
+}
+
+.labelvalue {
+  font-weight: 400;
+  color: #555;
+}
+
+.comment {
+    border-radius: 5px;
+    padding: 5px;
+    background-color: #ff69b4;
+    color: white;
+}
