@@ -1,0 +1,131 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 10px; 
+}
+
+body {
+  background-color: #f4f4f4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+nav {
+  width: 100%;
+  height: 60px;
+  background-color: #333;
+  color: white;
+  position: fixed; 
+  top: 0;
+  z-index: 1000;
+}
+
+nav > ul {
+  display: flex;
+  list-style: none;
+  height: 100%;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0 20%;
+}
+
+nav li {
+  cursor: pointer;
+  transition: color 0.3s;
+  font-size: 1.5rem; 
+}
+
+nav li:hover {
+  color: #ffb6c1;
+}
+
+#heading {
+  margin-top: 100px;
+  color: #333;
+  text-align: center;
+  font-size: 2.5rem;
+}
+
+.contents {
+  background-color: #fff;
+  padding: 10px 20px;
+  border-radius: 10px;
+  color: #ff69b4;
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+}
+
+main {
+  min-height: 70vh; 
+  margin: 20px 0;
+  display: flex;
+  flex-direction: column; 
+  justify-content: center; 
+  align-items: center; 
+  background: white;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  width: 80%; 
+  max-width: 600px;
+}
+
+#info-display {
+  display: none;
+  width: 100%;
+  background-color: #fff0f5; 
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  border-left: 4px solid #ff69b4;
+  text-align: center;
+}
+
+#info-display h3 {
+  font-size: 1.8rem;
+  color: #ff1493;
+  margin-bottom: 10px;
+}
+
+#info-display p {
+  font-size: 1.4rem;
+  line-height: 1.6;
+  color: #555;
+}
+
+section p {
+  font-size: 1.2rem;
+  margin: 5px 0;
+}
+
+input[type="password"] {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  width: 250px;
+}
+
+input:focus {
+  outline: 2px solid #ff69b4; 
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #ff69b4;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.2s, background-color 0.2s;
+}
+
+button:hover {
+  background-color: #ff1493;
+  transform: scale(1.05); 
+}
+
+button:active {
+  transform: scale(0.95); 
+}
