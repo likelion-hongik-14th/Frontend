@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "movieImage": "/src/assets/JujutsuKaisen0.jpg",
+    "releaseDate": "2021.12.24",
+    "actor": "오가타 메구미, 나카무라 유이치, 사쿠라 타카히로",
+    "title": "주술회전 0",
+    "director": "박성후",
+    "description": "특급 주령에게 얽힌 소년 옷코츠 유타가 도쿄 도립 주술고전에서 성장해 나가는 이야기"
+  },
+  {
+    "id": 2,
+    "movieImage": "/src/assets/DemonSlayerInfinityCastle.jpg",
+    "releaseDate": "2025.07.18",
+    "actor": "하나에 나츠키, 키토 아카리, 시모노 히로",
+    "title": "귀멸의 칼날 무한성편",
+    "director": "소토자키 하루오",
+    "description": "귀살대와 혈귀들의 최종 결전이 무한성에서 펼쳐지는 극장판 애니메이션"
+  },
+  {
+    "id": 3,
+    "movieImage": "/src/assets/DemonSlayerMugenTrain.jpg",
+    "releaseDate": "2020.10.16",
+    "actor": "하나에 나츠키, 키토 아카리, 히노 사토시",
+    "title": "귀멸의 칼날 무한열차편",
+    "director": "소토자키 하루오",
+    "description": "탄지로 일행이 무한열차에서 렌고쿠 쿄쥬로와 함께 혈귀에 맞서는 이야기"
+  },
+  {
+    "id": 4,
+    "movieImage": "/src/assets/ChainsawManRezeArc.jpg",
+    "releaseDate": "2025.09.19",
+    "actor": "토야 키쿠노스케, 쿠스노키 토모리, 우에다 레이나",
+    "title": "체인소맨 레제편",
+    "director": "요시하라 타츠야",
+    "description": "덴지가 수수께끼의 소녀 레제를 만나며 새로운 사건에 휘말리는 이야기"
+  }
+]
