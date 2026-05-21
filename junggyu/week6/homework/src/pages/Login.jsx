@@ -4,7 +4,8 @@ import { loginAPI } from '../apis/authApi'; // 로그인 api 함수
 import useAuthStore from '../stores/useAuthStore'; // zustand 인증 상태 관리 스토어
 
 
-
+/* ajg1114@naver.com */
+/* 5640 */
 
 const Login = () => {
   const setAccessToken = useAuthStore((state) => state.setAccessToken); 
@@ -41,6 +42,13 @@ const Login = () => {
           <input type="password" placeholder='비밀번호' value = {password} onChange={(e)=> setPassword(e.target.value)}></input>
           <button type='submit' className='mt-1 h-12 w-full rounded bg-blue-600 text-base font-bold'>로그인 ㄱ_ㄱ</button>
         </form>
+        <button
+            type="button"
+            onClick={() => navigate("/signup")}
+            className="mt-3 h-12 w-full rounded bg-gray-600 text-base font-bold"
+        >
+            회원가입 하러가기
+        </button>
       </div>
     </div>
   );

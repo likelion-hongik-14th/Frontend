@@ -7,6 +7,7 @@ import Login from './pages/Login'
 import MovieList from './pages/MovieList'
 import { Layout } from './components/layouts/Layout'
 import useAuthStore from './stores/useAuthStore'
+import SignUp from './pages/SignUp'
 
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
         <Route path='/' element={<Layout />}>
           <Route index element={<MovieList />} />
           <Route path='/login' element={<Login />} />
+          <Route path='/signup' element={<SignUp />} />
           <Route path='/mypage' element={ accessToken ? <Mypage/> : <Navigate to="/login" replace /> } />
           <Route path='/top100' element={<Top100 />} />
           <Route path='*' element={<NotFound />} />

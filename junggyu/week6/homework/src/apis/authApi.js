@@ -36,3 +36,15 @@ export const logoutAPI = async (accessToken) => {
         throw new Error("로그아웃 실패");
     }
 };
+
+export const signupAPI = async ({ email, password }) => {
+    try {
+        const { data } = await axios.post(`${BASE_URL}/api/auth/signup`, {
+            email,
+            password,
+        });
+        return data;
+    } catch (error) {
+        throw new Error("회원가입 실패");
+    }
+};
