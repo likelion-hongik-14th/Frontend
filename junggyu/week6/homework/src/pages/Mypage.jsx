@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState,useEffect } from "react";
 import Modal from "../components/Modal";
 import MovieCard from "../components/MovieCard";
 import useRecentShows from "../hooks/useRecentShow";
@@ -6,12 +6,13 @@ import out from '/src/assets/X.png'
 import { useNavigate } from "react-router-dom";
 import { logoutAPI } from "../apis/authApi";
 import useAuthStore from "../stores/useAuthStore";
+import { getContentsAPI } from "../apis/contentsApi";
 
 
 
 const Mypage = () => {
-  const {recentShows, removeShow} = useRecentShows();
   const [ selectedShow, setSelectedShow] = useState(null);
+  const [savedContents, setSavedContents] = useState([]);
 
   const navigate = useNavigate();
   const accessToken = useAuthStore((state) => state.accessToken);
@@ -28,6 +29,21 @@ const Mypage = () => {
       navigate("/login");
     }
   };
+
+  useEffect(() => {
+    const fetchContents = async () => {
+      try {
+        const data = await getContentsAPI(accessToken);
+        console.log("contents response:", data);
+        setSavedContents(data);
+      } catch (error) {
+        console.error("저장한 무비 조회 실패:", error);
+      }
+    };
+    if (accessToken) {
+      fetchContents();
+    } 
+  }, [accessToken]);
 
 
 
@@ -56,35 +72,26 @@ const Mypage = () => {
 
       <section>
           <h2>최근본 컨텐츠</h2>
-          {recentShows.length ===0?(
-            <p className="text-gray-400">최근 본 콘텐츠가 없습니다.</p>
-          ):(
-            <div>
-              {recentShows.map((show)=>(
-                <div key={show.id} onClick={()=> setSelectedShow(show)} className="w-[220px]">
-                  <MovieCard movie={show} />
-                  <button
-                    onClick={(e)=> {
-                      e.stopPropagation();
-                      removeShow(show.id);
-                    }}
-                    >
-                      <img src={out} className=' cursor-pointer hover:scale-130 h-[50px] w-[50px]' /> 
-                    </button>
+          {savedContents.length === 0 ? (
+            <p className="text-gray-400">저장한 콘텐츠가 없습니다.</p>
+          ) : (
+            <div className="grid grid-cols-6 gap-4">
+              {savedContents.map((show) => (
+                <div
+                  key={show.internalId}
+                  className="w-[220px] cursor-pointer"
+                >
+                  <MovieCard movie={show} onOpenModal={setSelectedShow} />
                 </div>
-              
               ))}
-              </div>
-            )}
-          
-
-
-
-
-
-
+            </div>
+          )}
       </section>
-      <Modal movie={ selectedShow} onClose={()=> setSelectedShow(null)}/>
+
+      {selectedShow && (
+        <Modal movie={selectedShow} onClose={() => setSelectedShow(null)} />
+      )}
+
     </main>
   );
 }
