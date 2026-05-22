@@ -4,11 +4,8 @@ import MovieCard from '../components/MovieCard'
 import SearchBar from '../components/SearchBar'
 import axios from 'axios'
 import useRecentShows from '../hooks/useRecentShow'
-
-// ⭐ 새로 추가된 import 들
-import useAuthStore from '../stores/useAuthStore'        // 토큰 가져오기
-import { saveContentAPI } from '../apis/contentsApi'      // 서버에 저장하는 함수
-
+import useAuthStore from '../stores/useAuthStore'
+import { saveContentAPI } from '../apis/contentsApi'
 
 const MovieList = () => {
     const [shows, setShows] = useState([])
@@ -16,12 +13,8 @@ const MovieList = () => {
     const [searchResults, setSearchResults] = useState([])
     const [selectedShow, setSelectedShow] = useState(null)
     const { addShow } = useRecentShows()
-
-    // ⭐ store에서 토큰 꺼내오기 (로그인 여부 판단용)
     const accessToken = useAuthStore((state) => state.accessToken)
 
-
-    // TVMaze에서 전체 쇼 목록 가져오기 (초기 로딩)
     useEffect(() => {
         const controller = new AbortController()
         axios.get('https://api.tvmaze.com/shows', { signal: controller.signal })
@@ -30,11 +23,8 @@ const MovieList = () => {
         return () => controller.abort()
     }, [])
 
-
     const trimmedQuery = query.trim()
 
-
-    // 검색어 변할 때마다 TVMaze 검색
     useEffect(() => {
         if (!trimmedQuery) {
             setSearchResults([])
@@ -52,34 +42,19 @@ const MovieList = () => {
         }
     }, [trimmedQuery])
 
-
     const featured = shows.slice(0, 8)
     const grid = shows.slice(8, 30)
 
-
-    // ⭐ 영화 카드 클릭 핸들러 — 핵심 수정 부분
-    const handleCardClick = async (show) => {
-        // 1. 로컬 "최근 본 영화" 에 추가 (기존 로직 유지)
+    const handleCardClick = (show) => {
         addShow(show)
-
-        // 2. 모달 즉시 열기 (서버 응답 기다리지 않음 - UX 우선)
         setSelectedShow(show)
 
-        // 3. 로그인 상태일 때만 서버에 저장
-        //    비로그인 시엔 토큰이 없어서 401/403 받을 거라 호출 자체를 안 함
         if (accessToken) {
-            try {
-                await saveContentAPI(show, accessToken)
-            } catch (err) {
-                // 백그라운드 저장이라 사용자에게 알림 안 띄움.
-                // 콘솔 로그는 contentsApi.js 안에 이미 있음.
-            }
+            saveContentAPI(show, accessToken)
         }
     }
 
-
     const gridClass = "grid grid-cols-2 tb:grid-cols-4 dt:grid-cols-6 gap-3 tb:gap-4"
-
 
     return (
         <main className="p-4 tb:p-6 dt:p-10 space-y-6 tb:space-y-8 dt:space-y-10">
