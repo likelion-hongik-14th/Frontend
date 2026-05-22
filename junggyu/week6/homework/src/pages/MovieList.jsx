@@ -4,6 +4,8 @@ import MovieCard from '../components/MovieCard';
 import axios from 'axios';
 import SearchBar from '../components/SearchBar';
 import useRecentShows from '../hooks/useRecentShow';
+import useAuthStore from '../stores/useAuthStore';
+import { getContentsAPI, postContentsAPI } from '../apis/contentsApi';
 
 
 const MovieList = () => {
@@ -12,6 +14,7 @@ const MovieList = () => {
   const [searchResults, setSearchResults] = useState([]);
   const [selectedShow, setSelectedShow] = useState(null);
   const { addShow } = useRecentShows();
+  const accessToken = useAuthStore((state) => state.accessToken);
 
   useEffect(() => {
     const controller = new AbortController();
@@ -48,9 +51,46 @@ const MovieList = () => {
   const featured = shows.slice(0, 4);
   const grid = shows.slice(4, 20);
 
-  const handleCardClick = (show) => {
-    addShow(show);
-    setSelectedShow(show);
+  const saveContentIfNotExists = async (show) => {
+  if (!accessToken) return;
+
+  try {
+    const savedContents = await getContentsAPI(accessToken);
+
+    const alreadySaved = savedContents.some(
+      (item) => item.tvMazeId === show.id
+    );
+
+    if (alreadySaved) {
+      console.log("이미 저장된 컨텐츠입니다.");
+      return;
+    }
+
+    const payload = {
+      id: show.id,
+      name: show.name,
+      image: {
+        medium:
+          show.image?.medium ??
+          show.image?.original ??
+          "https://via.placeholder.com/210x295?text=No+Image",
+      },
+    };
+
+    console.log("POST payload:", payload);
+
+    await postContentsAPI(payload, accessToken);
+    console.log("컨텐츠 저장 성공");
+  } catch (error) {
+    console.error("컨텐츠 저장 실패:", error);
+  }
+};
+
+
+  const handleCardClick = async (show) => {
+    /*addShow(show);*/
+    await saveContentIfNotExists(show);
+    /*setSelectedShow(show);*/
   };
 
   return (
