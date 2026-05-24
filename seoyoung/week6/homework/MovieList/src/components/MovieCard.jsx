@@ -3,7 +3,7 @@
 const MovieCard = ({ show }) => {
   const rawImageUrl = show?.image?.medium || show?.imageUrl;
 
-  //mypage에선 백엔드 데이xj 사용, movielist에선 api연동 후 사용하므로 나눠주기
+  //mypage에선 백엔드 데이터 사용, movielist에선 api연동 후 사용하므로 나눠주기
   const secureImageUrl = rawImageUrl
     ? rawImageUrl.replace('http://', 'https://')
     : 'https://via.placeholder.com/210x295?text=No+Image';

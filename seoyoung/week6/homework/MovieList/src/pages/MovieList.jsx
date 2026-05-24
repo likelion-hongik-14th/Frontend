@@ -7,8 +7,6 @@ import { useState, useEffect, useMemo } from 'react';
 import useRecentShows from '../hooks/useRecentShows';
 import SearchBar from '../components/SearchBar';
 import MovieModal from '../components/MovieModal';
-import { ContentGETAPI } from '../apis/authApi'; //로그인 API 함수
-import useAuthStore from '../stores/useAuthStore'; //zustand 인증 상태 관리 스토어
 
 const MovieList = () => {
   //TV show 목록 저장
@@ -33,7 +31,7 @@ const MovieList = () => {
 
     axios
       //서버에서 영화를 가져와서, {기존요청 취소해주는 컨트롤러}
-      .get('http://api.tvmaze.com/shows', { signal: controller.signal })
+      .get('https://api.tvmaze.com/shows', { signal: controller.signal })
       //요청이 성공하면 res : 서버의 응답 res.data : 실제 서버가 보내준 데이터 <- res.data를 shows에 저장
       .then((res) => setShows(res.data))
       //실패하면 실행
