@@ -16,6 +16,9 @@ import Top100 from "./pages/Top100";
 import MyPage from "./pages/MyPage";
 import NotFound from "./pages/NotFound";
 
+import Signup from "./pages/Signup";
+
+
 function App() {
   const accessToken = useAuthStore((state) => state.accessToken);
 
@@ -39,6 +42,9 @@ function App() {
 
             {/* 마이페이지 */}
             <Route path="/mypage" element={accessToken ? <MyPage /> : <Navigate to='/login' replace />} />
+
+            {/* 회원가입 */}
+            <Route path="/signup" element={<Signup />} />
 
             {/* 404 페이지 (위의 경로 외에 접속 시) */}
             <Route path="*" element={<NotFound />} />
