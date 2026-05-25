@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "movieImage": "/src/assets/이터널선샤인.jpeg",
+    "title": "이터널 선샤인",
+    "releaseDate": "2004년 3월 19일",
+    "actor": "짐 캐리, 케이트 윈슬렛",
+    "director": "미셸 공드리",
+    "description": "기억 속에서 서로를 지워버린 두 남녀가 다시 만나게 되는 이야기. 기억을 잃어도 감정은 지워지지 않는다"
+  },
+  {
+    "id": 2,
+    "movieImage": "/src/assets/토이스토리.jpeg",
+    "title": "토이스토리",
+    "releaseDate": "1995년 11월 22일",
+    "actor": "우디, 버즈",
+    "director": "존 라세터",
+    "description": "장난감들이 살아 숨쉬는 세계에서 주인의 사랑을 받기 위해 경쟁하던 우디와 버즈가 우정을 쌓아가는 이야기"
+  },
+  {
+    "id": 3,
+    "movieImage": "/src/assets/주토피아.jpeg",
+    "title": "주토피아",
+    "releaseDate": "2016년 2월 11일",
+    "actor": "주디, 닉 와일드",
+    "director": "바이런 하워드, 리치 무어",
+    "description": "동물들이 사는 도시 주토피아에서 최초의 토끼 경찰관 주디가 사건을 해결해나가는 이야기"
+  },
+  {
+    "id": 4,
+    "movieImage": "/src/assets/어벤져스.jpeg",
+    "title": "어벤져스",
+    "releaseDate": "2012년 4월 26일",
+    "actor": "로버트 다우니 주니어, 크리스 에반스",
+    "director": "조스 웨던",
+    "description": "아이언맨, 캡틴 아메리카, 토르, 헐크가 한 팀이 되어 지구를 위협하는 로키에 맞서 싸우는 이야기"
+  }
+]
