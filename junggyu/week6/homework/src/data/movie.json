@@ -1,0 +1,50 @@
+[
+    {
+        "movieImage": "/src/assets/영웅본색.png",
+        "releaseDate": "1987년 5월 23일",
+        "actor": "주윤발, 장국영, 적룡",
+        "title": "영웅본색",
+        "director": "오우삼",
+        "description": "자호와 마크는 절친한 친구로 함께 조직에서 일하며 위조지폐를 거래한다. 한편 자호는 경찰이 된 동생 자걸을 위해 불법행위로 점철된 삶을 청산하고자 한다.",
+        "link": "https://www.tving.com/contents/M000376473"
+    },
+    {
+        "movieImage": "/src/assets/중경삼림.png",
+        "releaseDate": "1995년 9월 2일",
+        "actor": "양조위, 왕페이, 임청하, 금성무",
+        "title": "중경삼림",
+        "director": "왕가위",
+        "description": "만우절에 연인과 헤어진 경찰 223은 슬픈 마음을 달래기 위해 술집을 찾아가고, 그곳에서 금발 머리가 매력적인 마약 밀매상을 만나게 된다.",
+        "link": "https://www.tving.com/contents/M000359943"
+    },
+    {
+        "movieImage": "/src/assets/엘리멘탈.png",
+        "releaseDate": "2023년 6월 14일",
+        "actor": "리아 루이스, 마무두 아티",
+        "title": "엘리멘탈",
+        "director": "피터 손",
+        "description": "불, 물, 땅, 공기, 각양각색의 원소들이 함께 살아가는 엘리멘트 시티, 열정적인 불의 여자 앰버와 감수성 풍부한 물의 남자 웨이드가 서로에게 끌린다.",
+        "link":"https://www.youtube.com/watch?v=f09juMecaRc"
+    },
+    {
+        "movieImage": "/src/assets/프렌즈.png",
+        "releaseDate": "1994년 9월 22일",
+        "actor": "제니퍼 애니스턴, 코트니 콕스, 리사 쿠드로, 맷 르블랑, 매튜 페리, 데이비드 슈위머",
+        "title": "프렌즈",
+        "director": "데이비드 크레인, 마르타 카우프만",
+        "description": "《프렌즈》는 미국 NBC에서 방송된 시트콤이다. 미국 뉴욕시 맨해튼의 그리니치 빌리지에 사는 2-30대 남녀 세 쌍의 생활을 그린 시트콤이다.",
+        "link":"https://www.coupangplay.com/content/65c0c0a9-c2eb-4016-ab42-e26f0426fdb6"
+    },
+    {
+        "movieImage": "/src/assets/화이트칼라.png",
+        "releaseDate": "2009년 10월 23일",
+        "actor": "맷 보머, 팀 디케이",
+        "title": "화이트칼라",
+        "director": "제프 이스틴",
+        "description": " 희대의 사기꾼 닐 카프리가 교도소 복역 중, 면회 중에 이별을 선언한 여자친구의 마음을 돌리기 위해 탈옥을 하면서부터 시작된다. 교도소 측은 닐 카프리를 잡아 넣은 FBI 화이트 칼라 범죄 수사팀 요원 피터 버크에게 연락, 추적을 요청하고, 피터 버크는 무난하게 닐 카프리를 잡아 넣게 되는데...",
+        "link":"https://www.disneyplus.com/ko-kr/browse/entity-58d3d0ce-8d86-4ccd-bd0c-104551448432"
+    }
+]
+
+
+
