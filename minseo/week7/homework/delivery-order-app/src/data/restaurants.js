@@ -1,3 +1,5 @@
+// src/data/restaurants.js
+
 export const restaurants = [
   {
     id: 1,
@@ -5,7 +7,7 @@ export const restaurants = [
     category: '분식',
     rating: 4.6,
     description: '다양한 꼬치 메뉴를 즐길 수 있는 꼬치 전문점',
-    image: '/src/assets/images/hero.png',
+    image: '/src/assets/images/왕꼬치.jpg',
     menus: [
       {
         id: 1,
@@ -33,7 +35,7 @@ export const restaurants = [
     category: '분식',
     rating: 4.6,
     description: '다양한 꼬치 메뉴를 즐길 수 있는 꼬치 전문점',
-    image: '/src/assets/images/hero.png',
+    image: '/src/assets/images/왕꼬치.jpg',
     menus: [
       {
         id: 1,
@@ -61,7 +63,7 @@ export const restaurants = [
     category: '기타',
     rating: 4.6,
     description: '다양한 꼬치 메뉴를 즐길 수 있는 꼬치 전문점',
-    image: '/src/assets/images/hero.png',
+    image: '/src/assets/images/왕꼬치.jpg',
     menus: [
       {
         id: 1,
@@ -89,7 +91,7 @@ export const restaurants = [
     category: '분식',
     rating: 4.6,
     description: '다양한 꼬치 메뉴를 즐길 수 있는 꼬치 전문점',
-    image: '/src/assets/images/hero.png',
+    image: '/src/assets/images/왕꼬치.jpg',
     menus: [
       {
         id: 1,
@@ -117,7 +119,7 @@ export const restaurants = [
     category: '기타',
     rating: 4.6,
     description: '다양한 꼬치 메뉴를 즐길 수 있는 꼬치 전문점',
-    image: '/src/assets/images/hero.png',
+    image: '/src/assets/images/왕꼬치.jpg',
     menus: [
       {
         id: 1,
@@ -145,7 +147,7 @@ export const restaurants = [
     category: '분식',
     rating: 4.6,
     description: '다양한 꼬치 메뉴를 즐길 수 있는 꼬치 전문점',
-    image: '/src/assets/images/hero.png',
+    image: '/src/assets/images/왕꼬치.jpg',
     menus: [
       {
         id: 1,
@@ -173,7 +175,7 @@ export const restaurants = [
     category: '기타',
     rating: 4.6,
     description: '다양한 꼬치 메뉴를 즐길 수 있는 꼬치 전문점',
-    image: '/src/assets/images/hero.png',
+    image: '/src/assets/images/왕꼬치.jpg',
     menus: [
       {
         id: 1,
@@ -201,7 +203,7 @@ export const restaurants = [
     category: '분식',
     rating: 4.6,
     description: '다양한 꼬치 메뉴를 즐길 수 있는 꼬치 전문점',
-    image: '/src/assets/images/hero.png',
+    image: '/src/assets/images/왕꼬치.jpg',
     menus: [
       {
         id: 1,
