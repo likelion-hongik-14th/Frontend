@@ -2,6 +2,7 @@ import { useState } from "react"; // 리액트 상태
 import { Link, useNavigate } from "react-router-dom"; // 페이지 이동
 import { loginAPI } from "../apis/authApi"; // 로그인 API 함수
 import useAuthStore from "../stores/useAuthStore"; // zustand 인증 상태 관리 스토어
+import { KaKaoLoginButton } from "../components/KakaoLoginButton";
 
 const Login = () => {
   const setTokens = useAuthStore((state) => state.setTokens);
@@ -72,9 +73,11 @@ const Login = () => {
             className="mt-1 h-12 w-full rounded bg-red-600 text-base font-bold hover:bg-red-700 transition"
           >
             로그인하기
-          </button>
-        </form>
+          </button> 
 
+          <KaKaoLoginButton></KaKaoLoginButton>
+
+        </form>
         <p className="mt-6 text-sm text-gray-400">
           아직 계정이 없나요?{" "}
           <Link to="/signup" className="text-white hover:underline">

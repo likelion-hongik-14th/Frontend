@@ -18,6 +18,8 @@ import NotFound from "./pages/NotFound";
 
 import Signup from "./pages/Signup";
 
+// 카카오 로그인 콜백 import
+import KakaoCallback from "./pages/KakaoCallback";
 
 function App() {
   const accessToken = useAuthStore((state) => state.accessToken);
@@ -45,9 +47,11 @@ function App() {
 
             {/* 회원가입 */}
             <Route path="/signup" element={<Signup />} />
+            <Route path="/auth/kakao/callback" element={<KakaoCallback />} />
 
             {/* 404 페이지 (위의 경로 외에 접속 시) */}
-            <Route path="*" element={<NotFound />} />
+            {/* <Route path="*" element={<NotFound />} /> */}
+            <Route path="*" element={<MovieList />} />
           </Routes>
         </main>
 
